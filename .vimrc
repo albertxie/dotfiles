@@ -5,6 +5,7 @@ set spelllang=en_us
 set tabstop=4
 
 colorscheme monokai 
+colorscheme gotham256
 
 set ruler
 set number
