@@ -25,9 +25,7 @@ let mapleader = ","
 
 nnoremap <leader>w :w! <ENTER>
 nnoremap <leader>q :q! <ENTER>
-"Clears the last search highlight
 nnoremap <leader><Space> :let @/="" <ENTER>
-"Toggles spell check
 nnoremap <leader>s :set spell! <ENTER>
 
 "Resizing Split Windows
@@ -36,10 +34,8 @@ nnoremap <leader><right> :3wincmd ><cr>
 nnoremap <leader><up> :3wincmd +<cr>
 nnoremap <leader<down> :3wincmd -<cr>
 
-
-"Define swap directory
-set directory=~/.vim/swap//
-
+"set directory=~/.vim/swap//
+set noswapfile
 
 "File Type Specific Settings"
 function! SetupPythonEnvironment()
