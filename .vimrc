@@ -19,7 +19,8 @@ set hlsearch
 set nowrap
 set cursorline
 set confirm
-set mouse=a
+
+"set mouse=a"
 
 "General Key Mappings"
 let mapleader = ","
