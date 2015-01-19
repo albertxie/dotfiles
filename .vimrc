@@ -19,6 +19,7 @@ set hlsearch
 set nowrap
 set cursorline
 set confirm
+set noswapfile
 
 "General Key Mappings"
 let mapleader = ","
@@ -27,6 +28,7 @@ nnoremap <leader>w :w! <ENTER>
 nnoremap <leader>q :q! <ENTER>
 nnoremap <leader><Space> :let @/="" <ENTER>
 nnoremap <leader>s :set spell! <ENTER>
+nnoremap <F2> :! git add % &&clear && echo % Added<ENTER>
 
 "Resizing Split Windows
 nnoremap <leader><left> :3wincmd <<cr>
@@ -34,8 +36,6 @@ nnoremap <leader><right> :3wincmd ><cr>
 nnoremap <leader><up> :3wincmd +<cr>
 nnoremap <leader<down> :3wincmd -<cr>
 
-"set directory=~/.vim/swap//
-set noswapfile
 
 "File Type Specific Settings"
 function! SetupPythonEnvironment()
