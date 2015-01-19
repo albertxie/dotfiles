@@ -20,8 +20,6 @@ set nowrap
 set cursorline
 set confirm
 
-"set mouse=a"
-
 "General Key Mappings"
 let mapleader = ","
 
