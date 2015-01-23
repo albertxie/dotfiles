@@ -24,8 +24,8 @@ set noswapfile
 "General Key Mappings"
 let mapleader = ","
 
+"Using the string jkl to exit insert mode"
 inoremap jkl <esc>
-
 nnoremap <leader>w :w! <ENTER>
 nnoremap <leader>q :q! <ENTER>
 nnoremap <leader><Space> :let @/="" <ENTER>
