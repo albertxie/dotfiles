@@ -24,6 +24,7 @@ $ git clone https://github.com/flazz/vim-colorschemes.git ~/.vim
 Mappings
 -------------------
 #### General
+* **jkl** in sequential order to escape
 * **,** as leader
 * **leader + w** as save
 * **leader + q** to quit
