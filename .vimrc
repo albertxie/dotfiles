@@ -3,6 +3,7 @@ syntax on
 set encoding=utf-8
 set spelllang=en_us
 set tabstop=4
+set listchars=tab:▸…,eol:¬,trail:•
 
 colorscheme monokai 
 colorscheme gotham256
@@ -46,7 +47,6 @@ function! SetupPythonEnvironment()
 	"PEP8 Style Guide"
 	set colorcolumn=79
 	set list
-	set listchars=trail:.
 	set expandtab
 	set tabstop=4
 endfunction
