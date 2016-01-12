@@ -4,6 +4,7 @@ set encoding=utf-8
 set spelllang=en_us
 set tabstop=4
 set listchars=tab:▸…,eol:¬,trail:•
+set mouse=a 
 
 colorscheme monokai 
 colorscheme gotham256
@@ -39,7 +40,6 @@ nnoremap <leader><right> :3wincmd ><cr>
 nnoremap <leader><up> :3wincmd +<cr>
 nnoremap <leader<down> :3wincmd -<cr>
 
-
 "File Type Specific Settings"
 function! SetupPythonEnvironment()
 	map <F5> :! clear && python3 % <ENTER>
@@ -49,6 +49,15 @@ function! SetupPythonEnvironment()
 	set list
 	set expandtab
 	set tabstop=4
+endfunction
+
+function! SetupCEnvironment() 
+	map <F5> :! clear && gcc -Wall -pedantic -o %:r % <ENTER>
+	map <F6> :! clear && ./%:r <ENTER>
+endfunction
+
+function! SetupJavaScriptEnvironment()
+	map <F5> :! clear && node % <ENTER>
 endfunction
 
 function! SetupJavaEnvironment()
@@ -62,13 +71,15 @@ function! SetupCppEnvironment()
 endfunction
 
 function! SetupTEXEnvironment()
-	map <F5> :! pdflatex % <ENTER>
+	map <F5> :! pdflatex % && open %:r.pdf <ENTER>
 endfunction
 
 "Checks for autocmd compatibility"
 if has("autocmd")
 	autocmd Filetype python call SetupPythonEnvironment()
+	autocmd Filetype javascript call SetupJavaScriptEnvironment()
 	autocmd Filetype java call SetupJavaEnvironment()
 	autocmd Filetype cpp call SetupCppEnvironment()
+	autocmd Filetype c call SetupCEnvironment()
 	autocmd Filetype tex call SetupTEXEnvironment()
 endif
