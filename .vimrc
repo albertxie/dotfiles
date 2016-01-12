@@ -52,8 +52,9 @@ function! SetupPythonEnvironment()
 endfunction
 
 function! SetupCEnvironment() 
-	map <F5> :! clear && gcc -Wall -pedantic -o %:r % <ENTER>
+	map <F5> :! clear && gcc -Wall -pedantic -g -o %:r % <ENTER>
 	map <F6> :! clear && ./%:r <ENTER>
+	map <F7> :! clear && gdb ./%:r <ENTER>
 endfunction
 
 function! SetupJavaScriptEnvironment()
