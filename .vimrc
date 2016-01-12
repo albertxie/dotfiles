@@ -54,7 +54,7 @@ endfunction
 function! SetupCEnvironment() 
 	map <F5> :! clear && gcc -Wall -pedantic -g -o %:r % <ENTER>
 	map <F6> :! clear && ./%:r <ENTER>
-	map <F7> :! clear && gdb ./%:r <ENTER>
+	map <F7> :! clear && gdb -q ./%:r <ENTER>
 endfunction
 
 function! SetupJavaScriptEnvironment()
