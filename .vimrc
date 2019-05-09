@@ -30,6 +30,7 @@ let mapleader = ","
 inoremap jkl <esc>
 nnoremap <leader>w :w! <ENTER>
 nnoremap <leader>q :q! <ENTER>
+nnoremap <leader>v :Vexplore <ENTER>
 nnoremap <leader><Space> :let @/="" <ENTER>
 nnoremap <leader>s :set spell! <ENTER>
 nnoremap <F2> :! git add % &&clear && echo % Added<ENTER>
