@@ -4,10 +4,11 @@ set encoding=utf-8
 set spelllang=en_us
 set tabstop=4
 set listchars=tab:▸…,eol:¬,trail:•
-set mouse=a 
+set mouse=a
 
-colorscheme monokai 
+colorscheme monokai
 colorscheme gotham256
+colorscheme badwolf
 
 set ruler
 set number
@@ -31,9 +32,9 @@ inoremap jkl <esc>
 nnoremap <leader>w :w! <ENTER>
 nnoremap <leader>q :q! <ENTER>
 nnoremap <leader>v :Vexplore <ENTER>
+nnoremap <leader>g :! clear && grep -rn . --include \*%:e -e 
 nnoremap <leader><Space> :let @/="" <ENTER>
 nnoremap <leader>s :set spell! <ENTER>
-nnoremap <F2> :! git add % &&clear && echo % Added<ENTER>
 
 "Resizing Split Windows
 nnoremap <leader><left> :3wincmd <<cr>
@@ -52,7 +53,7 @@ function! SetupPythonEnvironment()
 	set tabstop=4
 endfunction
 
-function! SetupCEnvironment() 
+function! SetupCEnvironment()
 	map <F5> :! clear && gcc -Wall -pedantic -g -o %:r % <ENTER>
 	map <F6> :! clear && ./%:r <ENTER>
 	map <F7> :! clear && gdb -q ./%:r <ENTER>
@@ -72,8 +73,14 @@ function! SetupCppEnvironment()
 	map <F6> :! clear && ./a.out <ENTER>
 endfunction
 
-function! SetupTEXEnvironment()
-	map <F5> :! pdflatex % && open %:r.pdf <ENTER>
+function! SetupRailsEnvironment() 
+	set colorcolumn=79
+	set list
+	set expandtab 
+	set tabstop=2
+	map <F5> :! clear && bundle exec rails c <ENTER>
+	map <F6> :! clear && bundle exec rails server <ENTER>
+	map <F7> :!	clear && bundle exec rspec % <ENTER> 
 endfunction
 
 "Checks for autocmd compatibility"
@@ -83,5 +90,5 @@ if has("autocmd")
 	autocmd Filetype java call SetupJavaEnvironment()
 	autocmd Filetype cpp call SetupCppEnvironment()
 	autocmd Filetype c call SetupCEnvironment()
-	autocmd Filetype tex call SetupTEXEnvironment()
+	autocmd Filetype ruby call SetupRailsEnvironment()
 endif
