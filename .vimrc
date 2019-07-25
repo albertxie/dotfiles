@@ -35,6 +35,8 @@ nnoremap <leader>v :Vexplore <ENTER>
 nnoremap <leader>g :! clear && grep -rn . --include \*%:e -e 
 nnoremap <leader><Space> :let @/="" <ENTER>
 nnoremap <leader>s :set spell! <ENTER>
+nnoremap <leader>d :! clear && git diff % <ENTER>
+nnoremap <leader>b :! clear && git blame % <ENTER>
 
 "Resizing Split Windows
 nnoremap <leader><left> :3wincmd <<cr>
@@ -47,7 +49,7 @@ function! SetupPythonEnvironment()
 	map <F5> :! clear && python3 % <ENTER>
 	map <F7> :! clear && python % <ENTER>
 	"PEP8 Style Guide"
-	set colorcolumn=79
+	set colorcolumn=119
 	set list
 	set expandtab
 	set tabstop=4
@@ -74,12 +76,12 @@ function! SetupCppEnvironment()
 endfunction
 
 function! SetupRailsEnvironment() 
-	set colorcolumn=79
+	set colorcolumn=119
 	set list
 	set expandtab 
 	set tabstop=2
-	map <F5> :! clear && bundle exec rails c <ENTER>
-	map <F6> :! clear && bundle exec rails server <ENTER>
+	map <F5> :! clear && rs <ENTER>
+	map <F6> :! clear && rc <ENTER>
 	map <F7> :!	clear && bundle exec rspec % <ENTER> 
 endfunction
 
