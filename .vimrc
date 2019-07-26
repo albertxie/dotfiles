@@ -12,6 +12,9 @@ endif
 "TabNine: autocomplete 
 set rtp+=~/.vim/bundle/tabnine-vim
 
+"CtrlP 
+set runtimepath^=~/.vim/bundle/ctrlp.vim
+
 "git-gutter
 let g:gitgutter_realtime=1
 let g:gitgutter_eager=1
