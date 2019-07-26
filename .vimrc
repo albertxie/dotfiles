@@ -1,3 +1,26 @@
+"Pathogen Vim 
+execute pathogen#infect() 
+filetype plugin indent on 
+syntax on
+
+"lightline 
+set laststatus=2
+if !has('gui_running')
+	set t_Co=256
+endif
+
+"TabNine: autocomplete 
+set rtp+=~/.vim/bundle/tabnine-vim
+
+"git-gutter
+let g:gitgutter_realtime=1
+let g:gitgutter_eager=1
+set updatetime=100
+
+
+"using ripgrep
+set grepprg=rg\ --vimgrep\ $*
+
 "Looks & Feel"
 syntax on
 set encoding=utf-8
@@ -82,7 +105,7 @@ function! SetupRailsEnvironment()
 	set tabstop=2
 	map <F5> :! clear && rs <ENTER>
 	map <F6> :! clear && rc <ENTER>
-	map <F7> :!	clear && bundle exec rspec % <ENTER> 
+	map <F7> :!	clear && bundle exec rspec %
 endfunction
 
 "Checks for autocmd compatibility"
@@ -94,3 +117,4 @@ if has("autocmd")
 	autocmd Filetype c call SetupCEnvironment()
 	autocmd Filetype ruby call SetupRailsEnvironment()
 endif
+
