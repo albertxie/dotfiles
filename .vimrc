@@ -1,7 +1,6 @@
 "Pathogen Vim 
 execute pathogen#infect() 
-filetype plugin indent on 
-syntax on
+filetype plugin indent on syntax on
 
 "lightline 
 set laststatus=2
@@ -14,9 +13,6 @@ set rtp+=~/.vim/bundle/tabnine-vim
 
 "CtrlP 
 set runtimepath^=~/.vim/bundle/ctrlp.vim
-
-" If installed using Homebrew
-set rtp+=/usr/local/opt/fzf
 
 "git-gutter
 let g:gitgutter_realtime=1
