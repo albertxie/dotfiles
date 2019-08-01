@@ -48,6 +48,7 @@ set nowrap
 set cursorline
 set confirm
 set noswapfile
+set autoread
 
 "General Key Mappings"
 let mapleader = ","
