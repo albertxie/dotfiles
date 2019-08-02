@@ -19,7 +19,6 @@ let g:gitgutter_realtime=1
 let g:gitgutter_eager=1
 set updatetime=100
 
-
 "using ripgrep
 set grepprg=rg\ --vimgrep\ $*
 
@@ -48,7 +47,6 @@ set nowrap
 set cursorline
 set confirm
 set noswapfile
-set autoread
 
 "General Key Mappings"
 let mapleader = ","
@@ -108,7 +106,7 @@ function! SetupRailsEnvironment()
 	set tabstop=2
 	map <F5> :! clear && rs <ENTER>
 	map <F6> :! clear && rc <ENTER>
-	map <F7> :!	clear && bundle exec rspec %
+	map <F7> :! clear && bundle exec rspec %
 endfunction
 
 "Checks for autocmd compatibility"
