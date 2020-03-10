@@ -78,8 +78,8 @@ nnoremap <leader<down> :3wincmd -<cr>
 
 "File Type Specific Settings"
 function! SetupPythonEnvironment()
-	map <F5> :! clear && python3 -m pdb % <ENTER>
-	map <F7> :! clear && python % <ENTER>
+	map <F5> :! clear && python3 % <ENTER>
+	map <F6> :! clear && python3 -m pdb % <ENTER>
 	"PEP8 Style Guide"
 	set colorcolumn=119
 	set list
