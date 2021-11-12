@@ -47,3 +47,5 @@ nnoremap <leader><Space> :let @/="" <ENTER>
 nnoremap <leader>s :set spell! <ENTER>
 nnoremap <leader>g :GitBlameToggle <ENTER>
 
+nmap cp :let @* = expand("%")<cr>
+set clipboard=unnamed
