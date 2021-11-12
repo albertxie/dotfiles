@@ -16,9 +16,6 @@ set backspace=indent,eol,start
 
 colorscheme github_dark_default
 
-let g:gitblame_enabled = 0
-let g:gitblame_message_template = '<summary> • <date> • <author>'
-
 
 set ruler
 set number
