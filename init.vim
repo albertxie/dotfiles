@@ -13,7 +13,6 @@ Plug '907th/vim-auto-save'
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-fugitive'
 
-runtime macros/matchit.vim
 " ----------------------------------------------------------------------
 call plug#end()
 

@@ -1,7 +1,0 @@
-.idea/
-workspace.xml
-.env
-*.env.dev
-terraform/
-*.tfstate
-.DS_Store

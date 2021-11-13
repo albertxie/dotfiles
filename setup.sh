@@ -1,13 +1,17 @@
 # Install NeoVim
 # https://github.com/neovim/homebrew-neovim
+brew update 
 brew install neovim
+
 
 # Install Plug 
 # https://github.com/junegunn/vim-plug#unix-linux
-sh -c 'curl -fLo "~/.config/nvim/site/autoload/plug.vim --create-dirs \
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
-# Copy existing nvim init file to nvim dir and install 
+
+# Copy existing nvim init file to nvim dir and install
+mkdir ~/.config/nvim
 cp init.vim ~/.config/nvim
 nvim +PlugInstall
 
