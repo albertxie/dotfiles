@@ -41,6 +41,7 @@ set clipboard=unnamed
 nmap cp :let @* = expand("%")<cr>
 
 "FZF mappings
+nnoremap <silent> <C-r> :Rg<CR>
 nnoremap <silent> <C-p> :Files<CR>
 nnoremap <silent> <C-b> :BTags<CR>
 nnoremap <silent> <C-u> :Buffers<CR>

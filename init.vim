@@ -1,7 +1,8 @@
-set termguicolors " use true colors in the terminal
+" use true colors in the terminal
+set termguicolors 
 
 
-call plug#begin('~/.vim/plugged2')
+call plug#begin('~/.vim/plugged')
 " ----------------------------------------------------------------------
 
 Plug 'projekt0n/github-nvim-theme'

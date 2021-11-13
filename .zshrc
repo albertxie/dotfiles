@@ -23,3 +23,6 @@ pg_local () {
   export PGDATABASE="postgres"
   pgcli
 }
+
+alias vim="nvim"
+alias vi="nvim"
