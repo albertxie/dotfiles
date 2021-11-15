@@ -23,6 +23,7 @@ set cursorline
 set confirm
 set noswapfile
 
+"Colorscheme"
 colorscheme tokyonight
 
 "General Key Mappings"
@@ -40,7 +41,6 @@ set clipboard=unnamed
 
 "Copy current relative file path to buffer"
 nmap cp :let @* = expand("%")<cr>
-
 
 "fzf mappings"
 nnoremap <silent> <C-r> :Rg<CR>
