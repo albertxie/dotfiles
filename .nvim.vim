@@ -33,7 +33,7 @@ nnoremap <leader>q :q! <ENTER>
 nnoremap <leader>n :NERDTreeFocus <ENTER>
 nnoremap <leader><Space> :let @/="" <ENTER>
 nnoremap <leader>s :set spell! <ENTER>
-nnoremap <leader>g :Git Blame <ENTER>
+nnoremap <leader>g :Git blame <ENTER>
 
 "Clipboard Management"
 set clipboard=unnamed
@@ -41,9 +41,9 @@ set clipboard=unnamed
 "Copy current relative file path to buffer"
 nmap cp :let @* = expand("%")<cr>
 
-"FZF mappings
+
+"fzf mappings"
 nnoremap <silent> <C-r> :Rg<CR>
 nnoremap <silent> <C-p> :Files<CR>
 nnoremap <silent> <C-b> :BTags<CR>
 nnoremap <silent> <C-u> :Buffers<CR>
-
