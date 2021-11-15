@@ -30,10 +30,10 @@ let mapleader = ","
 inoremap jkl <esc>
 nnoremap <leader>w :w! <ENTER>
 nnoremap <leader>q :q! <ENTER>
-nnoremap <leader>v :Vexplore <ENTER>
+nnoremap <leader>n :NERDTreeFocus <ENTER>
 nnoremap <leader><Space> :let @/="" <ENTER>
 nnoremap <leader>s :set spell! <ENTER>
-nnoremap <leader>g :GitBlameToggle <ENTER>
+nnoremap <leader>g :Git Blame <ENTER>
 
 "Clipboard Management"
 set clipboard=unnamed
