@@ -5,7 +5,6 @@ set termguicolors
 call plug#begin('~/.vim/plugged')
 " ----------------------------------------------------------------------
 
-Plug 'projekt0n/github-nvim-theme'
 Plug 'itchyny/lightline.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
