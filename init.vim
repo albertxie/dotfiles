@@ -10,6 +10,7 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'hashivim/vim-terraform', { 'for': 'terraform' }
 Plug '907th/vim-auto-save'
+Plug 'preservim/nerdtree'
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-fugitive'
 Plug 'sheerun/vim-polyglot'
