@@ -13,6 +13,8 @@ Plug 'hashivim/vim-terraform', { 'for': 'terraform' }
 Plug '907th/vim-auto-save'
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-fugitive'
+Plug 'sheerun/vim-polyglot'
+Plug 'ghifarit53/tokyonight-vim'
 
 " ----------------------------------------------------------------------
 call plug#end()
