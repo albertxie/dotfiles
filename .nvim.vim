@@ -22,7 +22,8 @@ set nowrap
 set cursorline
 set confirm
 set noswapfile
-colorscheme github_dark_default
+
+colorscheme tokyonight
 
 "General Key Mappings"
 let mapleader = ","
