@@ -42,8 +42,15 @@ set clipboard=unnamed
 "Copy current relative file path to buffer"
 nmap cp :let @* = expand("%")<cr>
 
-"fzf mappings"
+"# fzf mappings
+silent! !git rev-parse --is-inside-work-tree
+if v:shell_error == 0
+  noremap <C-p> :GFiles --cached --others --exclude-standard<CR>
+else
+  noremap <C-p> :Files<CR>
+endif
 nnoremap <silent> <C-r> :Rg<CR>
-nnoremap <silent> <C-p> :Files<CR>
 nnoremap <silent> <C-b> :BTags<CR>
 nnoremap <silent> <C-u> :Buffers<CR>
+
+
