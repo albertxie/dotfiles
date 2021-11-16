@@ -2,6 +2,8 @@
 # https://github.com/neovim/homebrew-neovim
 brew update 
 brew install neovim
+brew install ripgrep
+brew install fzf
 
 
 # Install Plug 
