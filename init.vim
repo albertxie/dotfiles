@@ -14,6 +14,7 @@ Plug 'preservim/nerdtree'
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-fugitive'
 Plug 'sheerun/vim-polyglot'
+Plug 'ludovicchabant/vim-gutentags'
 Plug 'ghifarit53/tokyonight-vim'
 
 " ----------------------------------------------------------------------
