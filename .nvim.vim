@@ -53,4 +53,8 @@ nnoremap <silent> <C-r> :Rg<CR>
 nnoremap <silent> <C-b> :BTags<CR>
 nnoremap <silent> <C-u> :Buffers<CR>
 
-
+"ctags"
+let g:gutentags_generate_on_new = 1
+let g:gutentags_generate_on_missing = 1
+let g:gutentags_generate_on_write = 1
+let g:gutentags_generate_on_empty_buffer = 0
