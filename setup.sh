@@ -2,9 +2,14 @@
 # https://github.com/neovim/homebrew-neovim
 brew update 
 brew install neovim
+
+
+# Plugin Dependencies
 brew install ripgrep
 brew install fzf
+brew uninstall ctags
 brew install universal-ctags
+
 
 # Install Plug 
 # https://github.com/junegunn/vim-plug#unix-linux
