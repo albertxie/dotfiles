@@ -24,6 +24,7 @@ set confirm
 set noswapfile
 
 "Colorscheme"
+let g:lightline = {'colorscheme': 'tokyonight'}
 colorscheme tokyonight
 
 let mapleader = ","
