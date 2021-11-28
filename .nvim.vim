@@ -68,3 +68,6 @@ let g:gutentags_generate_on_empty_buffer = 0
 nnoremap <silent><Leader>d <C-w><C-]><C-w>T
 "find multiple definitions"
 nnoremap <silent><Leader>f g]
+
+"coq"
+let g:coq_settings = { 'auto_start': 'shut-up' }
