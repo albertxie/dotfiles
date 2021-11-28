@@ -4,7 +4,7 @@ brew update
 brew install neovim
 brew install ripgrep
 brew install fzf
-brew install ctags
+brew install universal-ctags
 
 # Install Plug 
 # https://github.com/junegunn/vim-plug#unix-linux
