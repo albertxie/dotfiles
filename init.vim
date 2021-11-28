@@ -14,7 +14,7 @@ Plug 'preservim/nerdtree'
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-fugitive'
 Plug 'sheerun/vim-polyglot'
-Plug 'ludovicchabant/vim-gutentags
+Plug 'ludovicchabant/vim-gutentags'
 Plug 'ms-jpq/coq_nvim', {'branch': 'coq'}
 Plug 'ms-jpq/coq.artifacts', {'branch': 'artifacts'}
 Plug 'numToStr/Comment.nvim'
