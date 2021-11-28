@@ -31,6 +31,7 @@ let mapleader = ","
 inoremap jkl <esc>
 nnoremap <leader>w :w! <ENTER>
 nnoremap <leader>q :q! <ENTER>
+nnoremap <leader>t :tabenw <CR>
 nnoremap <leader>n :NERDTreeFocus <ENTER>
 nnoremap <leader><Space> :let @/="" <ENTER>
 nnoremap <leader>s :set spell! <ENTER>
