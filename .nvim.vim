@@ -62,3 +62,6 @@ let g:gutentags_generate_on_empty_buffer = 0
 
 "open tag in new tab"
 :nnoremap <silent><Leader>d <C-w><C-]><C-w>T
+"find multiple definitions"
+:nnoremap <silent><Leader>f g]
+
