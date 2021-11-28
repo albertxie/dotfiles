@@ -23,19 +23,25 @@ set cursorline
 set confirm
 set noswapfile
 
-"Colorscheme"
-let g:lightline = {'colorscheme': 'tokyonight'}
-colorscheme tokyonight
-
+"Key Mappings"
 let mapleader = ","
 inoremap jkl <esc>
 nnoremap <leader>w :w! <CR>
 nnoremap <leader>q :q! <CR>
 nnoremap <leader>t :tabnew <CR>
-nnoremap <leader>n :NERDTreeFocus <CR>
 nnoremap <leader><Space> :let @/="" <CR>
 nnoremap <leader>s :set spell! <CR>
+
+"Colorscheme"
+let g:lightline = {'colorscheme': 'tokyonight'}
+colorscheme tokyonight
+
+"git"
 nnoremap <leader>g :Git blame <CR>
+
+"nerdtree"
+let NERDTreeShowHidden=1
+nnoremap <leader>n :NERDTreeFocus <CR>
 
 "Clipboard Management"
 set clipboard=unnamed
@@ -61,7 +67,6 @@ let g:gutentags_generate_on_write = 1
 let g:gutentags_generate_on_empty_buffer = 0
 
 "open tag in new tab"
-:nnoremap <silent><Leader>d <C-w><C-]><C-w>T
+nnoremap <silent><Leader>d <C-w><C-]><C-w>T
 "find multiple definitions"
-:nnoremap <silent><Leader>f g]
-
+nnoremap <silent><Leader>f g]
