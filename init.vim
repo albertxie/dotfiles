@@ -17,11 +17,14 @@ Plug 'sheerun/vim-polyglot'
 Plug 'ludovicchabant/vim-gutentags
 Plug 'ms-jpq/coq_nvim', {'branch': 'coq'}
 Plug 'ms-jpq/coq.artifacts', {'branch': 'artifacts'}
+Plug 'numToStr/Comment.nvim'
 Plug 'ghifarit53/tokyonight-vim'
 
 " ----------------------------------------------------------------------
 call plug#end()
 
+" additional plugin setup
+lua require('Comment').setup()
 
 " source extra settings
 source ~/.nvim.vim
