@@ -32,6 +32,11 @@ nnoremap <leader>t :tabnew <CR>
 nnoremap <leader><Space> :let @/="" <CR>
 nnoremap <leader>s :set spell! <CR>
 
+"Clipboard Management"
+set clipboard=unnamed
+"Copy current relative file path to buffer"
+nmap cp :let @* = expand("%")<CR>
+
 "Colorscheme"
 let g:lightline = {'colorscheme': 'tokyonight'}
 colorscheme tokyonight
@@ -43,13 +48,7 @@ nnoremap <leader>g :Git blame <CR>
 let NERDTreeShowHidden=1
 nnoremap <leader>n :NERDTreeFocus <CR>
 
-"Clipboard Management"
-set clipboard=unnamed
-
-"Copy current relative file path to buffer"
-nmap cp :let @* = expand("%")<CR>
-
-"# fzf mappings
+"fzf"
 silent! !git rev-parse --is-inside-work-tree
 if v:shell_error == 0
   noremap <C-p> :GFiles --cached --others --exclude-standard<CR>
@@ -65,7 +64,6 @@ let g:gutentags_generate_on_new = 1
 let g:gutentags_generate_on_missing = 1
 let g:gutentags_generate_on_write = 1
 let g:gutentags_generate_on_empty_buffer = 0
-
 "open tag in new tab"
 nnoremap <silent><Leader>d <C-w><C-]><C-w>T
 "find multiple definitions"
