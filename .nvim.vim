@@ -31,6 +31,7 @@ nnoremap <leader>q :q! <CR>
 nnoremap <leader>t :tabnew <CR>
 nnoremap <leader><Space> :let @/="" <CR>
 nnoremap <leader>s :set spell! <CR>
+nnoremap <silent><C-t> :terminal <CR>
 
 "Clipboard Management"
 set clipboard=unnamed
