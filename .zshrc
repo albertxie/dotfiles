@@ -1,3 +1,8 @@
+# compile and run c++ 
+cpp_run () {
+  g++ -Wall -pedantic -g -o a.out $1 && ./a.out && rm a.out && rm -rf *.dSYM
+}
+
 # docker container ls
 alias dcls="docker container ls"
 
