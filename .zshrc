@@ -1,6 +1,6 @@
 # compile and run c++ 
 cpp_run () {
-  g++ -Wall -pedantic -g -o a.out $1 && ./a.out && rm a.out && rm -rf *.dSYM
+  g++ -Wall -std=c++11 -pedantic -g -o a.out $1 && ./a.out && rm a.out && rm -rf *.dSYM
 }
 
 # docker container ls
