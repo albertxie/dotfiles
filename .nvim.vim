@@ -65,6 +65,7 @@ let g:gutentags_generate_on_new = 1
 let g:gutentags_generate_on_missing = 1
 let g:gutentags_generate_on_write = 1
 let g:gutentags_generate_on_empty_buffer = 0
+let g:gutentags_file_list_command = 'rg --files'
 "open tag in new tab"
 nnoremap <silent><Leader>d <C-w><C-]><C-w>T
 "find multiple definitions"
