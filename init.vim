@@ -23,6 +23,7 @@ Plug 'ghifarit53/tokyonight-vim'
 " ----------------------------------------------------------------------
 call plug#end()
 
+
 " setup comment.nvim
 lua require('Comment').setup()
 
@@ -35,6 +36,7 @@ lua <<EOF
     },
   }
 EOF
+
 
 " source extra settings
 source ~/.nvim.vim
