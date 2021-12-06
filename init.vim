@@ -36,6 +36,5 @@ lua <<EOF
   }
 EOF
 
-
 " source extra settings
 source ~/.nvim.vim
