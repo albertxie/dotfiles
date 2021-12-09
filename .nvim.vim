@@ -1,4 +1,6 @@
-"Looks & Feel"
+" -------------------------------------
+" General Settings
+" -------------------------------------
 syntax on
 set encoding=utf-8
 set spelllang=en_us
@@ -23,7 +25,10 @@ set cursorline
 set confirm
 set noswapfile
 
-"Key Mappings"
+
+" -------------------------------------
+" Key Mapping
+" -------------------------------------
 nnoremap Q <nop> "disable visual mode
 let mapleader = ","
 inoremap jkl <esc>
@@ -34,15 +39,25 @@ nnoremap <leader><Space> :let @/="" <CR>
 nnoremap <leader>s :set spell! <CR>
 nnoremap <silent><C-t> :terminal <CR>
 
-"Clipboard Management"
+
+" -------------------------------------
+" Clipboard Management
+" -------------------------------------
 set clipboard=unnamed
 "Copy current relative file path to buffer"
 nmap cp :let @* = expand("%")<CR>
 
-"Colorscheme"
+
+" -------------------------------------
+" Colors
+" -------------------------------------
 let g:lightline = {'colorscheme': 'tokyonight'}
 colorscheme tokyonight
 
+
+" -------------------------------------
+" Plugin Configurations
+" ------------------------------------
 "git"
 nnoremap <leader>g :Git blame <CR>
 
