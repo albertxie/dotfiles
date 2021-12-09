@@ -24,8 +24,6 @@ set nowrap
 set cursorline
 set confirm
 set noswapfile
-set relativenumber
-set so=999
 
 
 " -------------------------------------
