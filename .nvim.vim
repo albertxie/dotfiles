@@ -85,9 +85,9 @@ let g:gutentags_generate_on_write = 1
 let g:gutentags_generate_on_empty_buffer = 0
 let g:gutentags_file_list_command = 'rg --files'
 "rely on <C-o> to go forward and <C-i> to go back between 
-nnoremap <silent>dd <C-]>
+nnoremap <silent><leader>d <C-]>
 "find multiple definitions"
-nnoremap <silent>ff g]
+nnoremap <silent><leader>f g]
 
 
 "coq"
