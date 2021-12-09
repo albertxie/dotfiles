@@ -31,8 +31,7 @@ set so=999
 " -------------------------------------
 " Key Mapping
 " -------------------------------------
-nnoremap Q <nop> "disable visual mode
-let mapleader = ","
+let mapleader = " "
 inoremap jkl <esc>
 nnoremap <leader>w :w! <CR>
 nnoremap <leader>q :q! <CR>
@@ -40,6 +39,7 @@ nnoremap <leader>t :tabnew <CR>
 nnoremap <leader><Space> :let @/="" <CR>
 nnoremap <leader>s :set spell! <CR>
 nnoremap <silent><C-t> :terminal <CR>
+nnoremap Q <nop> "disable visual mode
 
 
 " -------------------------------------
