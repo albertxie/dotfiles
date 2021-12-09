@@ -85,9 +85,10 @@ let g:gutentags_generate_on_write = 1
 let g:gutentags_generate_on_empty_buffer = 0
 let g:gutentags_file_list_command = 'rg --files'
 "rely on <C-o> to go forward and <C-i> to go back between 
-nnoremap <silent><Leader>d <C-]>
+nnoremap <silent>dd <C-]>
 "find multiple definitions"
-nnoremap <silent><Leader>f g]
+nnoremap <silent>ff g]
+
 
 "coq"
 let g:coq_settings = { 'auto_start': 'shut-up' }
