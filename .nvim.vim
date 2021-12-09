@@ -24,6 +24,7 @@ set confirm
 set noswapfile
 
 "Key Mappings"
+nnoremap Q <nop> "disable visual mode
 let mapleader = ","
 inoremap jkl <esc>
 nnoremap <leader>w :w! <CR>
@@ -56,7 +57,7 @@ if v:shell_error == 0
 else
   noremap <C-p> :Files<CR>
 endif
-nnoremap <silent> <C-r> :Rg<CR>
+nnoremap <silent> <C-q> :Rg<CR>
 nnoremap <silent> <C-b> :BTags<CR>
 nnoremap <silent> <C-u> :Buffers<CR>
 
@@ -66,10 +67,10 @@ let g:gutentags_generate_on_missing = 1
 let g:gutentags_generate_on_write = 1
 let g:gutentags_generate_on_empty_buffer = 0
 let g:gutentags_file_list_command = 'rg --files'
-"open tag in new tab"
-nnoremap <silent><Leader>d <C-w><C-]><C-w>T
+"rely on <C-o> to go forward and <C-i> to go back between 
+nnoremap <silent><Leader>d <C-]>
 "find multiple definitions"
-nnoremap <silent><Leader>f <C-w>g]<C-w>T
+nnoremap <silent><Leader>f g]
 
 "coq"
 let g:coq_settings = { 'auto_start': 'shut-up' }
