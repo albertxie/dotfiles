@@ -65,16 +65,9 @@ nnoremap <leader>g :Git blame <CR>
 let NERDTreeShowHidden=1
 nnoremap <leader>n :NERDTreeFocus <CR>
 
-"fzf"
-silent! !git rev-parse --is-inside-work-tree
-if v:shell_error == 0
-  noremap <C-p> :GFiles --cached --others --exclude-standard<CR>
-else
-  noremap <C-p> :Files<CR>
-endif
-nnoremap <silent> <C-q> :Rg<CR>
-nnoremap <silent> <C-b> :BTags<CR>
-nnoremap <silent> <C-u> :Buffers<CR>
+"telescope
+nnoremap <C-p> <cmd>Telescope find_files <CR>
+nnoremap <C-q> <cmd>Telescope live_grep <CR>
 
 "ctags"
 let g:gutentags_generate_on_new = 1
