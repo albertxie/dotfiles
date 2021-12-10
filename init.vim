@@ -37,6 +37,7 @@ lua <<EOF
   }
 EOF
 
+" setup telescope
 lua <<EOF
   require('telescope').setup{
     defaults = {
