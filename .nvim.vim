@@ -80,6 +80,5 @@ nnoremap <silent><leader>d <C-]>
 "find multiple definitions"
 nnoremap <silent><leader>f g]
 
-
 "coq"
 let g:coq_settings = { 'auto_start': 'shut-up' }
