@@ -37,6 +37,24 @@ lua <<EOF
   }
 EOF
 
+lua <<EOF
+  require('telescope').setup{
+    defaults = {
+      vimgrep_arguments = {
+        'rg',
+        '--files',
+        '--color=never',
+        '--no-heading',
+        '--with-filename',
+        '--line-number',
+        '--column',
+        '--smart-case',
+        '-u'
+      },
+    }
+  }
+EOF
+
 
 " source extra settings
 source ~/.nvim.vim
