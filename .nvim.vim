@@ -66,6 +66,7 @@ let NERDTreeShowHidden=1
 nnoremap <leader>n :NERDTreeFocus <CR>
 
 "fzf"
+"in search mode, <C-j>/<C-k> can be used to navigate up/down"
 silent! !git rev-parse --is-inside-work-tree
 if v:shell_error == 0
   noremap <C-p> :GFiles --cached --others --exclude-standard<CR>
