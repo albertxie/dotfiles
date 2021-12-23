@@ -18,6 +18,8 @@ Plug 'ludovicchabant/vim-gutentags'
 Plug 'ms-jpq/coq_nvim', {'branch': 'coq'}
 Plug 'ms-jpq/coq.artifacts', {'branch': 'artifacts'}
 Plug 'numToStr/Comment.nvim'
+Plug 'hhvm/vim-hack'
+Plug 'dense-analysis/ale'
 Plug 'ghifarit53/tokyonight-vim'
 
 " ----------------------------------------------------------------------
