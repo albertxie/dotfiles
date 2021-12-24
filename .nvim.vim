@@ -6,6 +6,7 @@ set encoding=utf-8
 set spelllang=en_us
 set expandtab
 set tabstop=2
+set shiftwidth=2
 set colorcolumn=119
 set listchars=tab:▸…,eol:¬,trail:•
 set list
