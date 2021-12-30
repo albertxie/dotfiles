@@ -1,6 +1,14 @@
+export EDITOR="nvim"
+export VISUAL="nvim"
+alias vim="nvim"
+alias vi="nvim"
+
 # compile and run c++ 
-cpp_run () {
-  g++ -Wall -std=c++11 -pedantic -g -o a.out $1 && ./a.out && rm a.out && rm -rf *.dSYM
+run() {
+  filename=$1
+  binary="${filename%.*}"
+  clang++ -Wall -std=c++11 -pedantic -o $binary $filename
+  ./$binary
 }
 
 # docker container ls
@@ -11,7 +19,7 @@ dcb () {
   docker exec -it $1 /bin/bash
 }
 
-# cleanup stale git branches
+# cleanup git branches
 git_cleanup () {
   git branch | grep $1 | while read line 
   do
@@ -28,9 +36,6 @@ pg_local () {
   export PGDATABASE="postgres"
   pgcli
 }
-
-alias vim="nvim"
-alias vi="nvim"
 
 # rename zsh prompt
 prompt_context() {
