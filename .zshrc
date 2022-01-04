@@ -1,3 +1,8 @@
+# add gems to PATH
+export GEM_HOME="$(ruby -e 'puts Gem.user_dir')"
+export PATH="$PATH:$GEM_HOME/bin"
+
+# use nvim as default editor 
 export EDITOR="nvim"
 export VISUAL="nvim"
 alias vim="nvim"
