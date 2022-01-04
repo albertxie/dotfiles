@@ -21,6 +21,7 @@ Plug 'numToStr/Comment.nvim'
 Plug 'hhvm/vim-hack'
 Plug 'dense-analysis/ale'
 Plug 'ghifarit53/tokyonight-vim'
+Plug 'neovim/nvim-lspconfig'
 
 " ----------------------------------------------------------------------
 call plug#end()
@@ -37,6 +38,12 @@ lua <<EOF
       enable = true,
     },
   }
+EOF
+
+" setup LSPs
+lua << EOF
+  require'lspconfig'.pyright.setup{}
+  require'lspconfig'.solargraph.setup{}
 EOF
 
 
