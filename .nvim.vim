@@ -59,8 +59,12 @@ colorscheme tokyonight
 " -------------------------------------
 " Plugin Configurations
 " ------------------------------------
-"git"
-nnoremap <leader>g :Git blame <CR>
+"gitsigns"
+nnoremap <leader>g :Gitsigns preview_hunk<CR>
+nnoremap <leader>gs :Gitsigns stage_hunk<CR>
+nnoremap <leader>gu :Gitsigns undo_stage_hunk<CR>
+nnoremap <leader>gg :Gitsigns stage_buffer<CR>
+nnoremap <leader>ggu :Gitsigns reset_buffer<CR>
 
 "nerdtree"
 let NERDTreeShowHidden=1
