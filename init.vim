@@ -23,7 +23,6 @@ Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'lewis6991/gitsigns.nvim'
 
-
 " ----------------------------------------------------------------------
 call plug#end()
 
