@@ -9,10 +9,8 @@ Plug 'itchyny/lightline.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'hashivim/vim-terraform', { 'for': 'terraform' }
-Plug '907th/vim-auto-save'
 Plug 'preservim/nerdtree'
 Plug 'tpope/vim-rails'
-Plug 'tpope/vim-fugitive'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'ms-jpq/coq_nvim', {'branch': 'coq'}
@@ -22,6 +20,9 @@ Plug 'hhvm/vim-hack'
 Plug 'dense-analysis/ale'
 Plug 'ghifarit53/tokyonight-vim'
 Plug 'neovim/nvim-lspconfig'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'lewis6991/gitsigns.nvim'
+
 
 " ----------------------------------------------------------------------
 call plug#end()
@@ -44,6 +45,14 @@ EOF
 lua << EOF
   require'lspconfig'.pyright.setup{}
   require'lspconfig'.solargraph.setup{}
+EOF
+
+" gitsigns
+lua << EOF
+  require('gitsigns').setup {
+    signcolumn = false,
+    numhl      = true,
+  }
 EOF
 
 
