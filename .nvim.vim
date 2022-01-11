@@ -63,6 +63,7 @@ colorscheme tokyonight
 nnoremap <leader>g :Gitsigns preview_hunk<CR>
 nnoremap <leader>gs :Gitsigns stage_hunk<CR>
 nnoremap <leader>gu :Gitsigns undo_stage_hunk<CR>
+nnoremap <leader>gb :Gitsigns blame_line<CR>
 nnoremap <leader>gg :Gitsigns stage_buffer<CR>
 nnoremap <leader>ggu :Gitsigns reset_buffer<CR>
 
