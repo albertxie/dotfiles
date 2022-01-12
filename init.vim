@@ -21,6 +21,7 @@ Plug 'ghifarit53/tokyonight-vim'
 Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'lewis6991/gitsigns.nvim'
+Plug 'tpope/vim-fugitive'
 
 " ----------------------------------------------------------------------
 call plug#end()
