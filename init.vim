@@ -12,7 +12,6 @@ Plug 'hashivim/vim-terraform', { 'for': 'terraform' }
 Plug 'preservim/nerdtree'
 Plug 'tpope/vim-rails'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-Plug 'ludovicchabant/vim-gutentags'
 Plug 'ms-jpq/coq_nvim', {'branch': 'coq'}
 Plug 'ms-jpq/coq.artifacts', {'branch': 'artifacts'}
 Plug 'numToStr/Comment.nvim'
