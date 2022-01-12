@@ -83,16 +83,10 @@ nnoremap <silent> <C-q> :Rg<CR>
 nnoremap <silent> <C-b> :BTags<CR>
 nnoremap <silent> <C-u> :Buffers<CR>
 
-"ctags"
-let g:gutentags_generate_on_new = 1
-let g:gutentags_generate_on_missing = 1
-let g:gutentags_generate_on_write = 1
-let g:gutentags_generate_on_empty_buffer = 0
-let g:gutentags_file_list_command = 'rg --files'
-"rely on <C-o> to go forward and <C-i> to go back between 
-nnoremap <silent><leader>d <C-]>
-"find multiple definitions"
-nnoremap <silent><leader>f g]
+"lsp-config"
+"rely on <C-o> to go forward and <C-i> to go back between
+nnoremap <silent><leader>d <cmd>lua vim.lsp.buf.declaration()<CR>
+nnoremap <silent><leader>r <cmd>lua vim.lsp.buf.references()<CR>
 
 "coq"
 let g:coq_settings = { 'auto_start': 'shut-up' }
