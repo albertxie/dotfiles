@@ -52,13 +52,15 @@ nmap cp :let @* = expand("%")<CR>
 " -------------------------------------
 " Colors
 " -------------------------------------
-let g:lightline = {'colorscheme': 'tokyonight'}
 colorscheme tokyonight
 
 
 " -------------------------------------
 " Plugin Configurations
 " ------------------------------------
+"lightline"
+let g:lightline = {'colorscheme': 'tokyonight'}
+
 "gitsigns"
 nnoremap <leader>g :Gitsigns preview_hunk<CR>
 nnoremap <leader>gs :Gitsigns stage_hunk<CR>
