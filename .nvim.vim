@@ -59,7 +59,16 @@ colorscheme tokyonight
 " Plugin Configurations
 " ------------------------------------
 "lightline"
-let g:lightline = {'colorscheme': 'tokyonight'}
+let g:lightline = {
+      \ 'colorscheme': 'tokyonight',
+      \ 'active': {
+      \   'left': [ [ 'mode' ],
+      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+      \ },
+      \ 'component_function': {
+      \   'gitbranch': 'FugitiveHead'
+      \ },
+      \ }
 
 "gitsigns"
 nnoremap <leader>g :Gitsigns preview_hunk<CR>
