@@ -7,8 +7,6 @@ brew install neovim
 # Plugin Dependencies
 brew install ripgrep
 brew install fzf
-brew uninstall ctags
-brew install universal-ctags
 
 
 # Install vim-plug 
