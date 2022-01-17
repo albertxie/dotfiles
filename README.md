@@ -1,3 +1,3 @@
 # dotfiles 
-My dev environment setup. 
-![dot](https://user-images.githubusercontent.com/7637648/141799609-fd7d2b4e-2f9c-43dd-9177-58454f3b34d5.png)
+My personal environment setup for Rails and Python development.
+![Screen Shot 2022-01-12 at 9 02 25 PM](https://user-images.githubusercontent.com/7637648/149252673-7f8a6dfe-2961-4f25-aad4-e235141ceaf0.png)
