@@ -1,5 +1,5 @@
 " use true colors in the terminal
-set termguicolors 
+set termguicolors
 
 
 call plug#begin('~/.vim/plugged')
@@ -44,6 +44,7 @@ EOF
 lua << EOF
   require'lspconfig'.pyright.setup{}
   require'lspconfig'.solargraph.setup{}
+  require'lspconfig'.tsserver.setup{}
 EOF
 
 " gitsigns
