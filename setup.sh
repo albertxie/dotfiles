@@ -1,6 +1,6 @@
 # Install NeoVim
 # https://github.com/neovim/homebrew-neovim
-brew update 
+brew update
 brew install neovim
 
 
@@ -9,7 +9,13 @@ brew install ripgrep
 brew install fzf
 
 
-# Install vim-plug 
+# Install LSPs
+python3 -m pip install pyright  # Python
+brew install ccls               # C/C++
+gem install solargraph          # Ruby
+
+
+# Install vim-plug
 # https://github.com/junegunn/vim-plug#unix-linux
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
