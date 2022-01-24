@@ -45,6 +45,13 @@ lua << EOF
   require'lspconfig'.pyright.setup{}
   require'lspconfig'.solargraph.setup{}
   require'lspconfig'.tsserver.setup{}
+  require'lspconfig'.ccls.setup {
+    init_options = {
+      cache = {
+        directory = ".ccls-cache"
+      };
+    }
+  }
 EOF
 
 " gitsigns
