@@ -5,6 +5,7 @@ export PATH="$PATH:$GEM_HOME/bin"
 # use nvim as default editor 
 export EDITOR="nvim"
 export VISUAL="nvim"
+export HGEDITOR="nvim"
 alias vim="nvim"
 alias vi="nvim"
 
