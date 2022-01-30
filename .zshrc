@@ -13,7 +13,7 @@ export CLICOLOR=1
 bindkey "^[[A" history-search-backward
 bindkey "^[[B" history-search-forward
 HISTSIZE=130000
-eSAVEHIST=130000
+SAVEHIST=130000
 
 # compile and run c++ 
 run() {
