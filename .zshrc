@@ -55,3 +55,7 @@ prompt_context() {
     prompt_segment black default "albert@home"
   fi
 }
+
+restart_audio_proxy() {
+  sudo launchctl kickstart -k system/com.apple.audio.coreaudiod
+}
