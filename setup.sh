@@ -8,6 +8,9 @@ brew install neovim
 brew install ripgrep
 brew install fzf
 
+# Setup fzf in terminal
+$(brew --prefix)/opt/fzf/install
+source ~/.zshrc 
 
 # Install LSPs
 python3 -m pip install pyright  # Python
