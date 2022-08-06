@@ -33,7 +33,7 @@ lua require('Comment').setup()
 " setup nvim-treesitter
 lua <<EOF
   require'nvim-treesitter.configs'.setup {
-    ensure_installed = "maintained",
+    ensure_installed = {'python', 'c', 'java', 'php', 'hack', 'ruby'},
     highlight = {
       enable = true,
     },
