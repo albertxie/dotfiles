@@ -29,3 +29,7 @@ nvim +PlugInstall
 
 # Copy .nvimv.vim
 cp .nvim.vim ~/
+
+
+# Post Install (nvim setup)
+:TSInstall all
