@@ -7,6 +7,8 @@ brew install neovim
 # Plugin Dependencies
 brew install ripgrep
 brew install fzf
+brew tap homebrew/cask-fonts
+brew install --cask font-hack-nerd-font
 
 # Setup fzf in terminal
 $(brew --prefix)/opt/fzf/install
