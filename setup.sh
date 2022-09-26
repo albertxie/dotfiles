@@ -15,7 +15,7 @@ $(brew --prefix)/opt/fzf/install
 source ~/.zshrc 
 
 # Install LSPs
-python3 -m pip install pyright  # Python
+npm i -g pyright                # Python
 brew install ccls               # C/C++
 gem install solargraph          # Ruby
 
