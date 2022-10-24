@@ -59,3 +59,5 @@ prompt_context() {
 restart_audio_proxy() {
   sudo launchctl kickstart -k system/com.apple.audio.coreaudiod
 }
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
