@@ -74,17 +74,10 @@ let g:lightline = {
 let NERDTreeShowHidden=1
 nnoremap <leader>n :NERDTreeFocus <CR>
 
-"fzf"
-"in search mode, <C-j>/<C-k> can be used to navigate up/down"
-silent! !git rev-parse --is-inside-work-tree
-if v:shell_error == 0
-  noremap <C-p> :GFiles --cached --others --exclude-standard<CR>
-else
-  noremap <C-p> :Files<CR>
-endif
-nnoremap <silent> <C-q> :Rg<CR>
-nnoremap <silent> <C-b> :BTags<CR>
-nnoremap <silent> <C-u> :Buffers<CR>
+"telescope"
+noremap <C-p> :Telescope find_files <CR>
+noremap <C-q> :Telescope live_grep <CR>
+noremap <C-b> :Telescope git_branches <CR>
 
 "lsp-config"
 "rely on <C-o> to go forward and <C-i> to go back between
