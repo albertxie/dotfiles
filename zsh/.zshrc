@@ -9,12 +9,6 @@ export HGEDITOR="nvim"
 alias vim="nvim"
 alias vi="nvim"
 
-export CLICOLOR=1
-bindkey "^[[A" history-search-backward
-bindkey "^[[B" history-search-forward
-HISTSIZE=130000
-SAVEHIST=130000
-
 # compile and run c++
 run() {
   filename=$1
@@ -56,8 +50,10 @@ prompt_context() {
   fi
 }
 
+# hack to get Apple silicon to play nice with device audio
 restart_audio_proxy() {
   sudo launchctl kickstart -k system/com.apple.audio.coreaudiod
 }
 
+# use fzf to reverse search
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

@@ -32,6 +32,7 @@ vim.g.noswapfile=true
 vim.o.clipboard='unnamed'
 vim.g.mapleader=' '
 
+
 -- Key Mappings
 imap('jkl', '<ESC>')
 nmap('<LEADER>w', ':w! <CR>')
