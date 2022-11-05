@@ -2,7 +2,7 @@
 export GEM_HOME="$(ruby -e 'puts Gem.user_dir')"
 export PATH="$PATH:$GEM_HOME/bin"
 
-# use nvim as default editor 
+# use nvim as default editor
 export EDITOR="nvim"
 export VISUAL="nvim"
 export HGEDITOR="nvim"
@@ -15,7 +15,7 @@ bindkey "^[[B" history-search-forward
 HISTSIZE=130000
 SAVEHIST=130000
 
-# compile and run c++ 
+# compile and run c++
 run() {
   filename=$1
   binary="${filename%.*}"
@@ -33,7 +33,7 @@ dcb () {
 
 # cleanup git branches
 git_cleanup () {
-  git branch | grep $1 | while read line 
+  git branch | grep $1 | while read line
   do
     git branch -D $line
   done

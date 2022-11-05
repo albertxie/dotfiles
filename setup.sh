@@ -12,7 +12,7 @@ brew install --cask font-hack-nerd-font
 
 # Setup fzf in terminal
 $(brew --prefix)/opt/fzf/install
-source ~/.zshrc 
+source ~/.zshrc
 
 # Install LSPs
 npm i -g pyright                # Python
@@ -26,11 +26,7 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 
 
-# Copy existing nvim init file to nvim dir and install
-mkdir ~/.config/nvim
-cp init.vim ~/.config/nvim
+# Copy nvim config
+mkdir -p ~/.config
+cp -r nvim ~/.config
 nvim +PlugInstall
-
-
-# Copy .nvimv.vim
-cp .nvim.vim ~/
