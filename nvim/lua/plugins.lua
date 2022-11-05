@@ -1,7 +1,17 @@
--- vim-plug associated settings
-
--- since vim-plug is written in vim script, we need to implement this wrapper
+-- [[
+-- Plugins
+--
+-- Since vim-plug is written in vim script
+-- we need to implement this wrapper
 -- to invoke vim command within a lua call
+--
+-- Note:
+-- 'for' and 'do' are reserved in lua
+-- Need to rewrite as [[ for ]], [[ do ]]
+--
+-- ]]
+
+
 local Plug = vim.fn['plug#']
 vim.call('plug#begin', '~/.vim/plugged')
 

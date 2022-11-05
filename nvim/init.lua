@@ -1,4 +1,16 @@
-require('plugins_config')
+-- [[
+-- Entrypoint to all lua based configs
+-- ]]
 
+
+-- Install plugins
+require('plugins')
+
+-- Helper methods lua shorthands
+require('meta_utils')
+
+-- Editor related configs
 require('settings')
-require('Comment')
+
+-- Configuring plugins
+require('plugin_configs')
