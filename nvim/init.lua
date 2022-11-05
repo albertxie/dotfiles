@@ -1,3 +1,4 @@
+require('plugins_config')
+
 require('settings')
-require('plug')
 require('Comment')

@@ -8,12 +8,11 @@ vim.call('plug#begin', '~/.vim/plugged')
 Plug 'itchyny/lightline.vim'
 Plug 'nvim-lua/plenary.nvim'
 Plug('nvim-telescope/telescope.nvim', { tag = '0.1.0' })
-Plug('hashivim/vim-terraform', { for = 'terraform' })
 Plug 'preservim/nerdtree'
 Plug 'tpope/vim-rails'
-Plug('nvim-treesitter/nvim-treesitter', {do = ':TSUpdateSync'})
-Plug('ms-jpq/coq_nvim', {branch = 'coq'})
-Plug('ms-jpq/coq.artifacts', {branch = 'artifacts'})
+Plug('nvim-treesitter/nvim-treesitter', { ['do'] = ':TSUpdateSync'})
+Plug('ms-jpq/coq_nvim', { branch = 'coq'})
+Plug('ms-jpq/coq.artifacts', { branch = 'artifacts'})
 Plug 'numToStr/Comment.nvim'
 Plug 'hhvm/vim-hack'
 Plug 'dense-analysis/ale'
