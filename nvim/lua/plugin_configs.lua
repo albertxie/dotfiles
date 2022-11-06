@@ -5,6 +5,9 @@
 
 -- setup Comment
 require('Comment')
+
+
+-- setup Github helpers
 require('github')
 
 

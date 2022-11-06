@@ -28,5 +28,9 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 
 # Copy nvim config
 mkdir -p ~/.config
-cp -r nvim ~/.config
+# Create symlink from neovim dotfiles repo to .config
+# ensure changes to dotfiles are tracked
+ln -s ~/dotfiles/nvim ~/.config/
+
+# install plugins
 nvim +PlugInstall
