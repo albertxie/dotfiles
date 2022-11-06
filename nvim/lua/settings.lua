@@ -32,7 +32,6 @@ vim.g.noswapfile=true
 vim.o.clipboard='unnamed'
 vim.g.mapleader=' '
 
-
 -- Key Mappings
 imap('jkl', '<ESC>')
 nmap('<LEADER>w', ':w! <CR>')
@@ -47,6 +46,7 @@ nmap('<LEADER>n', ':NERDTreeFocus <CR>')
 nmap('<C-p>', ':Telescope find_files <CR>', {silent=true})
 nmap('<C-q>', ':Telescope live_grep <CR>', {silent=true})
 nmap('<C-b>', ':Telescope git_branches <CR>', {silent=true})
+nmap('<C-g>', ':lua open_github() <CR>', {silent=true})
 
 
 -- Colorscheme

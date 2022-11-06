@@ -5,6 +5,7 @@
 
 -- setup Comment
 require('Comment')
+require('github')
 
 
 -- nvim-treesitter configs
