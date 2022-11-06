@@ -5,13 +5,13 @@
 
 
 function open_github()
-  if not is_git_repo() then print("Not inside a git repo") return end
+  if not is_git_repo() then print("Not a git repo") return end
   local github_url = get_github_url()
   os.execute('open ' .. github_url)
 end
 
 
-local function sout(cmd)
+function sout(cmd)
   local f = assert(io.popen(cmd, 'r'))
   local s = assert(f:read('*a'))
   f:close()
@@ -24,7 +24,7 @@ local function sout(cmd)
   return s
 end
 
-local function get_github_url()
+function get_github_url()
   if not is_git_repo() then return end
 
   local remote = get_remote_url()
@@ -41,26 +41,26 @@ local function get_github_url()
   return github_location
 end
 
-local function get_current_branch()
+function get_current_branch()
   if not is_git_repo() then return end
   local cmd = 'git rev-parse --abbrev-ref HEAD'
   return sout(cmd)
 end
 
-local function get_repo_name()
+function get_repo_name()
   if not is_git_repo() then return end
   local cmd = 'basename `git rev-parse --show-toplevel`'
   return sout(cmd)
 end
 
-local function get_remote_url()
+function get_remote_url()
   if not is_git_repo() then return end
   local cmd = "git config --get remote.origin.url"
   url = string.gsub(sout(cmd), '.git*$', '')
   return url
 end
 
-local function is_git_repo()
+function is_git_repo()
   local cmd = "git rev-parse --is-inside-work-tree 2> /dev/null"
   local git_status = os.execute(cmd)
   return git_status == 0
