@@ -28,7 +28,7 @@ vim.o.hlsearch=true
 vim.g.nowrap=true
 vim.o.cursorline=true
 vim.o.confirm=true
-vim.g.noswapfile=true
+vim.o.noswapfile=true
 vim.o.clipboard='unnamed'
 vim.g.mapleader=' '
 
