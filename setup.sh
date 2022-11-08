@@ -9,6 +9,8 @@ brew install ripgrep
 brew install fzf
 brew tap homebrew/cask-fonts
 brew install --cask font-hack-nerd-font
+brew tap hhvm/hhvm
+brew install hhvm
 
 # Setup fzf in terminal
 $(brew --prefix)/opt/fzf/install
