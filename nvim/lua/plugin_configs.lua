@@ -24,6 +24,7 @@ require'nvim-treesitter.configs'.setup {
 require'lspconfig'.pyright.setup{}
 require'lspconfig'.solargraph.setup{}
 require'lspconfig'.tsserver.setup{}
+require'lspconfig'.hhvm.setup{}
 require'lspconfig'.ccls.setup {
   init_options = {
     cache = {
