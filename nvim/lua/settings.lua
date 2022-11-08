@@ -42,11 +42,17 @@ nmap('<LEADER><Space>', ':let @/="" <CR>')
 nmap('<C-t>', ':terminal <CR>', {silent=true})
 nmap('Q', '<NOP>', {silent=true})
 nmap('cp', ':let @* = expand("%") <CR>')
-nmap('<LEADER>n', ':NERDTreeFocus <CR>')
+nmap('<LEADER>n', ':NERDTreeToggle <CR>')
 nmap('<C-p>', ':Telescope find_files <CR>', {silent=true})
 nmap('<C-q>', ':Telescope live_grep <CR>', {silent=true})
 nmap('<C-b>', ':Telescope git_branches <CR>', {silent=true})
 nmap('<M-LeftMouse>', ':lua open_github() <CR>', {silent=true})
+
+
+-- LSP config
+-- rely on <C-o> to go forward and <C-i> to go back between
+nmap('<LEADER>d', ':Telescope lsp_definitions <CR>')
+nmap('<LEADER>r', ':Telescope lsp_references<CR>')
 
 -- Colorscheme
 vim.cmd("colorscheme tokyonight")
