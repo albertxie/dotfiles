@@ -52,7 +52,7 @@ pg_local () {
 # rename zsh prompt
 prompt_context() {
   if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
-    prompt_segment black default "albert@home"
+    prompt_segment black default ""
   fi
 }
 
