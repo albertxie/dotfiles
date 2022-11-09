@@ -1,3 +1,9 @@
+# Default zsh Configs
+export ZSH="$HOME/.oh-my-zsh"
+ZSH_THEME="agnoster"
+plugins=(git)
+source $ZSH/oh-my-zsh.sh
+
 # add gems to PATH
 export GEM_HOME="$(ruby -e 'puts Gem.user_dir')"
 export PATH="$PATH:$GEM_HOME/bin"
