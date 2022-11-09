@@ -33,6 +33,7 @@ mkdir -p ~/.config
 # Create symlink from neovim dotfiles repo to .config
 # ensure changes to dotfiles are tracked
 ln -s ~/dotfiles/nvim ~/.config/
+ln -s ~/dotfiles/zsh/.zshrc ~/.zshrc
 
 # install plugins
 nvim +PlugInstall
