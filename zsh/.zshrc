@@ -57,3 +57,11 @@ restart_audio_proxy() {
 
 # use fzf to reverse search
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+
+# build and open latex files
+latex_make() {
+  filename=$1
+  latexmk -pdf -e '$pdflatex=q/xelatex %O %S/; $out_dir="build"' $filename
+  open "build/${filename%.*}.pdf"
+}
