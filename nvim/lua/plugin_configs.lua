@@ -44,6 +44,7 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
 
 -- lsp lines
 require('lsp_lines').setup{}
+vim.diagnostic.config({ virtual_lines = { only_current_line = true } })
 
 
 -- git sign configs
