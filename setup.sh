@@ -19,6 +19,7 @@ source ~/.zshrc
 # Install LSPs
 npm i -g pyright                # Python
 brew install ccls               # C/C++
+brew install ltex-ls            # LaTeX/Markdown
 gem install solargraph          # Ruby
 
 

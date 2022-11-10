@@ -32,6 +32,7 @@ require'lspconfig'.ccls.setup {
     };
   }
 }
+require'lspconfig'.ltex.setup{}
 
 
 -- git sign configs
