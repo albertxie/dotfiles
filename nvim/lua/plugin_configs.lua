@@ -42,6 +42,9 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
   }
 )
 
+-- lsp lines
+require('lsp_lines').setup{}
+
 
 -- git sign configs
 require('gitsigns').setup {

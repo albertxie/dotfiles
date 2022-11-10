@@ -53,8 +53,6 @@ nmap('<M-LeftMouse>', ':lua open_github() <CR>', {silent=true})
 -- rely on <C-o> to go forward and <C-i> to go back between
 nmap('<LEADER>d', ':Telescope lsp_definitions <CR>')
 nmap('<LEADER>r', ':Telescope lsp_references<CR>')
-vim.cmd([[ autocmd CursorHold * lua vim.diagnostic.open_float({scope="line"}) ]])
-vim.cmd([[ autocmd CursorHoldI * lua vim.diagnostic.open_float({scope="line"}) ]])
 
 -- Colorscheme
 vim.cmd("colorscheme tokyonight")
