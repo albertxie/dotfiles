@@ -69,5 +69,7 @@ restart_audio_proxy() {
 latex_make() {
   filename=$1
   latexmk -pdf -e '$pdflatex=q/xelatex %O %S/; $out_dir="build"' $filename
-  open "build/${filename%.*}.pdf"
+  if [[ $2 ]]; then
+    open "build/${filename%.*}.pdf"
+  fi
 }
