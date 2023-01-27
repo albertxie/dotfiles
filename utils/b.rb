@@ -51,5 +51,5 @@ items = json['roots']
 
 items.each do |item|
   name = trim item[:name], width
-  puts [just(name, width), url].join("\t")
+  puts [just(name, width), item[:url]].join("\t")
 end
