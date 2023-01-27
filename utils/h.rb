@@ -37,11 +37,13 @@ end
 width = `tput cols`.strip.to_i / 2
 
 begin
-  db.execute( "select * from urls order by last_visit_time desc limit 1000" ) do |row|
+  db.execute( "select * from urls order by last_visit_time desc limit 10000" ) do |row|
     _id, url, title = row
     title = trim(title, width)
-    puts [just(title, width), url, width].join("\t")
+    puts [just(title, width), url] .join("\t")
   end
 rescue => e
   puts "You must exit Google Chrome before searching for history"
+ensure
+  db.close
 end
