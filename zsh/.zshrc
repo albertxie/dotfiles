@@ -74,7 +74,7 @@ latex_make() {
   fi
 }
 
-function bm() {
+function bb() {
   link=$(ruby ~/b.rb | fzf | grep -oE "[^[:space:]]+$")
   if [ -z "$link" ]
   then
