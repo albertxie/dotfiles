@@ -35,6 +35,7 @@ mkdir -p ~/.config
 # ensure changes to dotfiles are tracked
 ln -s ~/dotfiles/nvim ~/.config/
 ln -s ~/dotfiles/zsh/.zshrc ~/.zshrc
+ln -s ~/dotfiles/utils/b.rb ~/b.rb
 
 # install plugins
 nvim +PlugInstall

@@ -73,3 +73,13 @@ latex_make() {
     open "build/${filename%.*}.pdf"
   fi
 }
+
+function bm() {
+  link=$(ruby ~/b.rb | fzf | grep -oE "[^[:space:]]+$")
+  if [ -z "$link" ]
+  then
+    echo "no bookmark found"
+  else
+    open -a google\ chrome "$link"
+  fi
+}
