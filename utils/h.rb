@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # vim: set filetype=ruby:
-# b - browse Chrome bookmarks with fzf
+# h - browse Chrome history with fzf
 
 [ $(uname) = Darwin ] || exit 1
 which fzf > /dev/null 2>&1 || brew reinstall --HEAD fzf || exit 1
@@ -9,24 +9,17 @@ which fzf > /dev/null 2>&1 || brew reinstall --HEAD fzf || exit 1
   fzf-tmux -u 30% --ansi --multi --no-hscroll --tiebreak=begin |
   awk 'BEGIN { FS = "\t" } { print $2 }'                       |
   xargs open
-
 exit $?
 
 #!ruby
 # encoding: utf-8
 
-require 'json'
-FILE = '~/Library/Application Support/Google/Chrome/Default/Bookmarks'
+require 'sqlite3'
+
+DB_PATH = "/Users/#{ENV['USER']}/Library/Application Support/Google/Chrome/Default/History"
 CJK  = /\p{Han}|\p{Katakana}|\p{Hiragana}|\p{Hangul}/
 
-def build parent, json
-  name = [parent, json['name']].compact.join('/')
-  if json['type'] == 'folder'
-    json['children'].map { |child| build name, child }
-  else
-    { name: name, url: json['url'] }
-  end
-end
+db = SQLite3::Database.new DB_PATH
 
 def just str, width
   str.ljust(width - str.scan(CJK).length)
@@ -42,14 +35,8 @@ def trim str, width
 end
 
 width = `tput cols`.strip.to_i / 2
-json  = JSON.load File.read File.expand_path FILE
-items = json['roots']
-        .values_at(*%w(bookmark_bar synced other))
-        .compact
-        .map { |e| build nil, e }
-        .flatten
-
-items.each do |item|
-  name = trim item[:name], width
-  puts [just(name, width), url].join("\t")
+db.execute( "select * from urls order by last_visit_time desc limit 1000" ) do |row|
+  _id, url, title = row
+  title = trim(title, width)
+  puts [just(title, width), url, width].join("\t")
 end

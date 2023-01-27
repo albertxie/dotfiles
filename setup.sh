@@ -36,6 +36,7 @@ mkdir -p ~/.config
 ln -s ~/dotfiles/nvim ~/.config/
 ln -s ~/dotfiles/zsh/.zshrc ~/.zshrc
 ln -s ~/dotfiles/utils/b.rb ~/b.rb
+ln -s ~/dotfiles/utils/h.rb ~/h.rb
 
 # install plugins
 nvim +PlugInstall

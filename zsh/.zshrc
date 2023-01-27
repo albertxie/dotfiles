@@ -83,3 +83,13 @@ function bm() {
     open -a google\ chrome "$link"
   fi
 }
+
+function hh() {
+  link=$(ruby ~/h.rb | fzf | grep -oE "[^[:space:]]+$")
+  if [ -z "$link" ]
+  then
+    echo "no history found"
+  else
+    open -a google\ chrome "$link"
+  fi
+}
