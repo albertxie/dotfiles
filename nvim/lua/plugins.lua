@@ -1,4 +1,4 @@
--- [[
+-- [[plu
 -- Plugins
 --
 -- Since vim-plug is written in vim script
@@ -31,6 +31,5 @@ Plug 'neovim/nvim-lspconfig'
 Plug 'lewis6991/gitsigns.nvim'
 Plug 'tpope/vim-fugitive'
 Plug 'ryanoasis/vim-devicons'
-Plug("https://git.sr.ht/~whynothugo/lsp_lines.nvim")
 
 vim.call('plug#end')
