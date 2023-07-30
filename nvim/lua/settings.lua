@@ -1,8 +1,3 @@
--- [[
--- Settings
--- ]]
-
-
 -- Vim based settings
 vim.o.termguicolors = true
 vim.o.encoding='utf-8'

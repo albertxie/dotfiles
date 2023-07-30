@@ -1,8 +1,3 @@
--- [[
--- Plugin configurations
--- ]]
-
-
 -- setup Comment
 require('Comment')
 

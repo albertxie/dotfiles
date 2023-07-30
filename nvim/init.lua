@@ -1,8 +1,3 @@
--- [[
--- Entrypoint to all lua based configs
--- ]]
-
-
 -- Install plugins
 require('plugins')
 

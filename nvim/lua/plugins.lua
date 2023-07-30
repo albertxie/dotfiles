@@ -1,35 +1,34 @@
--- [[plu
--- Plugins
---
--- Since vim-plug is written in vim script
--- we need to implement this wrapper
--- to invoke vim command within a lua call
---
--- Note:
--- 'for' and 'do' are reserved in lua
--- Need to rewrite as [[ for ]], [[ do ]]
---
--- ]]
+-- bootstrap lazy.nvim 
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable", -- latest stable release
+    lazypath,
+  })
+end
+vim.opt.rtp:prepend(lazypath)
 
-
-local Plug = vim.fn['plug#']
-vim.call('plug#begin', '~/.vim/plugged')
-
-Plug 'itchyny/lightline.vim'
-Plug 'nvim-lua/plenary.nvim'
-Plug('nvim-telescope/telescope.nvim', { tag = '0.1.0' })
-Plug 'preservim/nerdtree'
-Plug 'tpope/vim-rails'
-Plug('nvim-treesitter/nvim-treesitter', { ['do'] = ':TSUpdateSync'})
-Plug('ms-jpq/coq_nvim', { branch = 'coq'})
-Plug('ms-jpq/coq.artifacts', { branch = 'artifacts'})
-Plug 'numToStr/Comment.nvim'
-Plug 'hhvm/vim-hack'
-Plug 'dense-analysis/ale'
-Plug 'ghifarit53/tokyonight-vim'
-Plug 'neovim/nvim-lspconfig'
-Plug 'lewis6991/gitsigns.nvim'
-Plug 'tpope/vim-fugitive'
-Plug 'ryanoasis/vim-devicons'
-
-vim.call('plug#end')
+-- define local plugins and setup via lazy
+plugins = {
+  "itchyny/lightline.vim",
+  "nvim-lua/plenary.nvim",
+  "nvim-telescope/telescope.nvim",
+  "preservim/nerdtree",
+  "tpope/vim-rails",
+  "nvim-treesitter/nvim-treesitter", build = ":TSUpdate",
+  "ms-jpq/coq_nvim",  branch = "coq",
+  "ms-jpq/coq.artifacts",  branch = "artifacts",
+  "numToStr/Comment.nvim",
+  "hhvm/vim-hack",
+  "dense-analysis/ale",
+  "ghifarit53/tokyonight-vim",
+  "neovim/nvim-lspconfig",
+  "lewis6991/gitsigns.nvim",
+  "tpope/vim-fugitive",
+  "ryanoasis/vim-devicons",
+}
+require("lazy").setup(plugins)

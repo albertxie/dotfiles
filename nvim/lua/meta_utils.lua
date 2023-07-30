@@ -1,10 +1,3 @@
--- [[
--- Meta Utils
---
--- Helper methods used to simplify syntax
--- ]]
-
-
 function map(mode, lhs, rhs, opts)
   local options = { noremap = true }
   if opts then

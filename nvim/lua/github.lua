@@ -1,9 +1,3 @@
--- [[
--- Github helpe
--- Set of functions used to find corresponding Github URL
--- ]]
-
-
 function open_github()
   if not is_git_repo() then print("Not a git repo") return end
   local github_url = get_github_url()
