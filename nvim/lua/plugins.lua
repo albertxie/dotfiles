@@ -1,4 +1,4 @@
--- bootstrap lazy.nvim 
+-- bootstrap lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({
@@ -25,7 +25,7 @@ plugins = {
   "numToStr/Comment.nvim",
   "hhvm/vim-hack",
   "dense-analysis/ale",
-  "ghifarit53/tokyonight-vim",
+  "folke/tokyonight.nvim",
   "neovim/nvim-lspconfig",
   "lewis6991/gitsigns.nvim",
   "tpope/vim-fugitive",
