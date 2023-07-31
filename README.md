@@ -1,3 +1,3 @@
 # dotfiles 
 My personal environment setup
-![dotfiles](https://user-images.githubusercontent.com/7637648/198839318-5f116fd0-facb-4e48-8754-92a6e309d206.png)
+![dotfiles](https://github.com/albertxie/dotfiles/assets/7637648/4cdeb4fd-e358-4609-9130-e843b8938a32)
