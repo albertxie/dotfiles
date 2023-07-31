@@ -12,15 +12,10 @@ brew install --cask font-hack-nerd-font
 brew tap hhvm/hhvm
 brew install hhvm
 
+
 # Setup fzf in terminal
 $(brew --prefix)/opt/fzf/install
 source ~/.zshrc
-
-# Install LSPs
-npm i -g pyright                # Python
-brew install ccls               # C/C++
-brew install ltex-ls            # LaTeX/Markdown
-gem install solargraph          # Ruby
 
 
 # Copy nvim config

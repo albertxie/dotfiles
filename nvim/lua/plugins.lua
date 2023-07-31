@@ -75,7 +75,7 @@ plugins = {
       vim.g.ale_linters = {
         hack = {'hack', 'hhast'},
         python = {'black'},
-        ruby = {'rubocop'}
+        ruby = {'rubocop'},
       }
       vim.api.nvim_exec([[ let g:ale_fixers = { '*': ['remove_trailing_lines', 'trim_whitespace'], 'hack': ['hackfmt'], } ]], true)
     end,
@@ -176,7 +176,13 @@ plugins = {
         extensions = {}
       }
     end,
-  }
+  },
+  {
+    "williamboman/mason.nvim",
+    config = function()
+      require("mason").setup()
+    end;
+  },
 }
 
 opts = {}
