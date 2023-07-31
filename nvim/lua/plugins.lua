@@ -165,7 +165,6 @@ plugins = {
   {
     "williamboman/mason.nvim",
     dependencies = {
-      "williamboman/mason-lspconfig.nvim",
       "mfussenegger/nvim-lint",
     },
     config = function()
@@ -212,6 +211,12 @@ plugins = {
           autocmd BufWritePost * FormatWrite
         augroup END
         ]])
+    end,
+  },
+  {
+    "williamboman/mason-lspconfig.nvim",
+    config = function()
+      require("mason-lspconfig").setup({})
     end,
   },
 }
