@@ -14,7 +14,6 @@ vim.opt.rtp:prepend(lazypath)
 
 -- define local plugins and setup
 plugins = {
-  "itchyny/lightline.vim",
   "nvim-lua/plenary.nvim",
   "nvim-telescope/telescope.nvim",
   "preservim/nerdtree",
@@ -25,11 +24,25 @@ plugins = {
   "numToStr/Comment.nvim",
   "hhvm/vim-hack",
   "dense-analysis/ale",
-  "folke/tokyonight.nvim",
+  "ghifarit53/tokyonight-vim",
   "neovim/nvim-lspconfig",
   "lewis6991/gitsigns.nvim",
   "tpope/vim-fugitive",
   "ryanoasis/vim-devicons",
+  {
+    'romgrk/barbar.nvim',
+    dependencies = {
+      'lewis6991/gitsigns.nvim', 
+      'nvim-tree/nvim-web-devicons',
+    },
+    init = function() vim.g.barbar_auto_setup = false end
+  }, 
+  {
+    'nvim-lualine/lualine.nvim',
+    dependencies = {
+      'nvim-tree/nvim-web-devicons',
+    }
+  }
 }
 
 opts = {}
