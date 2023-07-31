@@ -40,7 +40,7 @@ vim.api.nvim_set_keymap('n', '<LEADER>n', ':NERDTreeToggle <CR>', {})
 vim.api.nvim_set_keymap('n', '<C-p>', ':Telescope find_files <CR>', {silent=true})
 vim.api.nvim_set_keymap('n', '<C-q>', ':Telescope live_grep <CR>', {silent=true})
 vim.api.nvim_set_keymap('n', '<C-b>', ':Telescope git_branches <CR>', {silent=true})
-vim.api.nvim_set_keymap('n', '<M-LeftMouse>', ':lua open_github() <CR>', {silent=true})
+vim.api.nvim_set_keymap('n', '<M-LeftMouse>', ':GBrowse <CR>', {silent=true})
 
 
 -- LSP config

@@ -2,10 +2,6 @@
 require('Comment')
 
 
--- setup Github helpers
-require('github')
-
-
 -- nvim-treesitter configs
 require'nvim-treesitter.configs'.setup {
   ensure_installed = {'python', 'c', 'java', 'php', 'hack', 'ruby'},

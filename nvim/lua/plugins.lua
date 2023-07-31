@@ -27,16 +27,21 @@ plugins = {
   "ghifarit53/tokyonight-vim",
   "neovim/nvim-lspconfig",
   "lewis6991/gitsigns.nvim",
-  "tpope/vim-fugitive",
+  {
+    "tpope/vim-fugitive",
+    dependencies = {
+      "tpope/vim-rhubarb",
+    },
+  },
   "ryanoasis/vim-devicons",
   {
     'romgrk/barbar.nvim',
     dependencies = {
-      'lewis6991/gitsigns.nvim', 
+      'lewis6991/gitsigns.nvim',
       'nvim-tree/nvim-web-devicons',
     },
     init = function() vim.g.barbar_auto_setup = false end
-  }, 
+  },
   {
     'nvim-lualine/lualine.nvim',
     dependencies = {
