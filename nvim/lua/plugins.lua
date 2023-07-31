@@ -12,7 +12,7 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
--- define local plugins and setup via lazy
+-- define local plugins and setup
 plugins = {
   "itchyny/lightline.vim",
   "nvim-lua/plenary.nvim",
@@ -31,4 +31,6 @@ plugins = {
   "tpope/vim-fugitive",
   "ryanoasis/vim-devicons",
 }
-require("lazy").setup(plugins)
+
+opts = {}
+require("lazy").setup(plugins, opts)

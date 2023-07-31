@@ -27,27 +27,26 @@ vim.o.clipboard='unnamed'
 vim.g.mapleader=' '
 vim.o.updatetime=500
 
--- Key Mappings
-imap('jkl', '<ESC>')
-nmap('<LEADER>w', ':w! <CR>')
-nmap('<LEADER>q', ':q! <CR>')
-nmap('<LEADER>t', ':tabnew <CR>')
-nmap('<LEADER>s', ':set spell! <CR>')
-nmap('<LEADER><Space>', ':let @/="" <CR>')
-nmap('<C-t>', ':terminal <CR>', {silent=true})
-nmap('Q', '<NOP>', {silent=true})
-nmap('cp', ':let @* = expand("%") <CR>')
-nmap('<LEADER>n', ':NERDTreeToggle <CR>')
-nmap('<C-p>', ':Telescope find_files <CR>', {silent=true})
-nmap('<C-q>', ':Telescope live_grep <CR>', {silent=true})
-nmap('<C-b>', ':Telescope git_branches <CR>', {silent=true})
-nmap('<M-LeftMouse>', ':lua open_github() <CR>', {silent=true})
+vim.api.nvim_set_keymap('i', 'jkl', '<ESC>', {})
+vim.api.nvim_set_keymap('n', '<LEADER>w', ':w! <CR>', {})
+vim.api.nvim_set_keymap('n', '<LEADER>q', ':q! <CR>', {})
+vim.api.nvim_set_keymap('n', '<LEADER>t', ':tabnew <CR>', {})
+vim.api.nvim_set_keymap('n', '<LEADER>s', ':set spell! <CR>', {})
+vim.api.nvim_set_keymap('n', '<LEADER><Space>', ':let @/="" <CR>', {})
+vim.api.nvim_set_keymap('n', '<C-t>', ':terminal <CR>', {silent=true})
+vim.api.nvim_set_keymap('n', 'Q', '<NOP>', {silent=true})
+vim.api.nvim_set_keymap('n', 'cp', ':let @* = expand("%") <CR>', {})
+vim.api.nvim_set_keymap('n', '<LEADER>n', ':NERDTreeToggle <CR>', {})
+vim.api.nvim_set_keymap('n', '<C-p>', ':Telescope find_files <CR>', {silent=true})
+vim.api.nvim_set_keymap('n', '<C-q>', ':Telescope live_grep <CR>', {silent=true})
+vim.api.nvim_set_keymap('n', '<C-b>', ':Telescope git_branches <CR>', {silent=true})
+vim.api.nvim_set_keymap('n', '<M-LeftMouse>', ':lua open_github() <CR>', {silent=true})
 
 
 -- LSP config
 -- rely on <C-o> to go forward and <C-i> to go back between
-nmap('<LEADER>d', ':Telescope lsp_definitions <CR>')
-nmap('<LEADER>r', ':Telescope lsp_references<CR>')
+vim.api.nvim_set_keymap('n', '<LEADER>d', ':Telescope lsp_definitions <CR>', {})
+vim.api.nvim_set_keymap('n', '<LEADER>r', ':Telescope lsp_references<CR>', {})
 
 -- Colorscheme
 vim.cmd("colorscheme tokyonight")
