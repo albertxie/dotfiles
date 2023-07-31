@@ -23,12 +23,6 @@ brew install ltex-ls            # LaTeX/Markdown
 gem install solargraph          # Ruby
 
 
-# Install vim-plug
-# https://github.com/junegunn/vim-plug#unix-linux
-sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
-       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
-
-
 # Copy nvim config
 mkdir -p ~/.config
 # Create symlink from neovim dotfiles repo to .config
@@ -37,6 +31,3 @@ ln -s ~/dotfiles/nvim ~/.config/
 ln -s ~/dotfiles/zsh/.zshrc ~/.zshrc
 ln -s ~/dotfiles/utils/b.rb ~/b.rb
 ln -s ~/dotfiles/utils/h.rb ~/h.rb
-
-# install plugins
-nvim +PlugInstall
