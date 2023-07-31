@@ -1,5 +1,5 @@
 -- Install plugins
-require('plugins')
+require("plugins")
 
 -- Editor related configs
-require('settings')
+require("settings")
