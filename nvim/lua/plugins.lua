@@ -198,6 +198,15 @@ plugins = {
               }
             end,
           },
+          markdown = {
+            require("formatter.filetypes.markdown").prettier,
+          },
+          sh = {
+            require("formatter.filetypes.sh").shfmt,
+          },
+          sql = {
+            require("formatter.filetypes.sql").pgformat,
+          },
           ["*"] = {
             require("formatter.filetypes.any").remove_trailing_whitespace,
           },
