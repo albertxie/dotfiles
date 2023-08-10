@@ -207,6 +207,9 @@ plugins = {
           sql = {
             require("formatter.filetypes.sql").pgformat,
           },
+          python = {
+            require("formatter.filetypes.python").black,
+          },
           ["*"] = {
             require("formatter.filetypes.any").remove_trailing_whitespace,
           },
