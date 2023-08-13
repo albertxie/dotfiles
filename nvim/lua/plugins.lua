@@ -231,6 +231,10 @@ plugins = {
       require("mason-lspconfig").setup({})
     end,
   },
+  {
+    "folke/trouble.nvim",
+    dependencies = { "nvim-tree/nvim-web-devicons" },
+  },
 }
 
 opts = {}
