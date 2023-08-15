@@ -235,6 +235,13 @@ plugins = {
     "folke/trouble.nvim",
     dependencies = { "nvim-tree/nvim-web-devicons" },
   },
+  {
+    "mfussenegger/nvim-dap",
+    dependencies = { "mfussenegger/nvim-dap-python" },
+    config = function()
+      require("dap-python").setup("python3")
+    end,
+  },
 }
 
 opts = {}
