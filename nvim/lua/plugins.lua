@@ -59,7 +59,7 @@ plugins = {
   {
     "numToStr/Comment.nvim",
     config = function()
-      require("Comment")
+      require("Comment").setup()
     end,
   },
   {
