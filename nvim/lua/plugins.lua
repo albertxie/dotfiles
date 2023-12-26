@@ -210,6 +210,12 @@ plugins = {
           python = {
             require("formatter.filetypes.python").black,
           },
+          typescript = {
+            require("formatter.filetypes.typescript").prettier,
+          },
+          typescriptreact = {
+            require("formatter.filetypes.typescript").prettier,
+          },
           ["*"] = {
             require("formatter.filetypes.any").remove_trailing_whitespace,
           },
